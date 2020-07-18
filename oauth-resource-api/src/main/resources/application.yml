@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: resource-server
+
+logging:
+  level:
+    org.springframework.*: TRACE
+security:
+  oauth2:
+    resource:
+      # if authorization server is needed to verify each and every request
+      #token-info-uri: http://localhost:8080/oauth/check_token
+
+      #if we only needed local validation of jwt using key, use key-value and set it to the signing Key used in authorization server
+      jwt:
+        key-value: key
+
+    client:
+      client-id: first
+      client-secret: secret
+

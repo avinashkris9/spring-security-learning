@@ -1,0 +1,9 @@
+test: I am from local yml
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8080/oauth/check_token
+    client:
+      client-id: second
+      client-secret: secret

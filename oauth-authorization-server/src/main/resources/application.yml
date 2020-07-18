@@ -1,0 +1,23 @@
+spring:
+  security:
+    user:
+      name: test
+      password: test123
+      roles: ADMIN,USER
+server:
+  port: 8080
+security:
+  oauth2:
+    authorization:
+      token-key-access: permitAll()
+    client:
+      client-id: mobile
+      client-secret: pin
+      access-token-validity-seconds: 3600
+      scope: READ,WRITE
+
+
+logging:
+  level:
+    org.springframework.security: TRACE
+
